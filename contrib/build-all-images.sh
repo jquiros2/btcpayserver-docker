@@ -170,18 +170,18 @@ cd - && cd ..
 
 
 # Build lnd
-# https://raw.githubusercontent.com/btcpayserver/lnd/basedon-v0.13.1-beta-withloop-fix/linuxamd64.Dockerfile
+# https://raw.githubusercontent.com/btcpayserver/lnd/basedon-v0.13.3-beta/linuxamd64.Dockerfile
 DOCKERFILE="linuxamd64.Dockerfile"
-# https://raw.githubusercontent.com/btcpayserver/lnd/basedon-v0.13.1-beta-withloop-fix/linuxarm32v7.Dockerfile
+# https://raw.githubusercontent.com/btcpayserver/lnd/basedon-v0.13.3-beta/linuxarm32v7.Dockerfile
 [[ "$(uname -m)" == "armv7l" ]] && DOCKERFILE="linuxarm32v7.Dockerfile"
-# https://raw.githubusercontent.com/btcpayserver/lnd/basedon-v0.13.1-beta-withloop-fix/linuxarm64v8.Dockerfile
+# https://raw.githubusercontent.com/btcpayserver/lnd/basedon-v0.13.3-beta/linuxarm64v8.Dockerfile
 [[ "$(uname -m)" == "aarch64" ]] && DOCKERFILE="linuxarm64v8.Dockerfile"
-echo "Building btcpayserver/lnd:v0.13.1-beta-withloop-fix"
+echo "Building btcpayserver/lnd:v0.13.3-beta"
 git clone https://github.com/btcpayserver/lnd lnd
 cd lnd
-git checkout basedon-v0.13.1-beta-withloop-fix
+git checkout basedon-v0.13.3-beta
 cd "$(dirname $DOCKERFILE)"
-docker build -f "$DOCKERFILE" -t "btcpayserver/lnd:v0.13.1-beta-withloop-fix" .
+docker build -f "$DOCKERFILE" -t "btcpayserver/lnd:v0.13.3-beta" .
 cd - && cd ..
 
 
@@ -484,18 +484,18 @@ cd - && cd ..
 
 
 # Build nbxplorer
-# https://raw.githubusercontent.com/dgarage/nbxplorer/v2.2.12/Dockerfile.linuxamd64
+# https://raw.githubusercontent.com/dgarage/nbxplorer/v2.2.15/Dockerfile.linuxamd64
 DOCKERFILE="Dockerfile.linuxamd64"
-# https://raw.githubusercontent.com/dgarage/nbxplorer/v2.2.12/Dockerfile.linuxarm32v7
+# https://raw.githubusercontent.com/dgarage/nbxplorer/v2.2.15/Dockerfile.linuxarm32v7
 [[ "$(uname -m)" == "armv7l" ]] && DOCKERFILE="Dockerfile.linuxarm32v7"
-# https://raw.githubusercontent.com/dgarage/nbxplorer/v2.2.12/Dockerfile.linuxarm64v8
+# https://raw.githubusercontent.com/dgarage/nbxplorer/v2.2.15/Dockerfile.linuxarm64v8
 [[ "$(uname -m)" == "aarch64" ]] && DOCKERFILE="Dockerfile.linuxarm64v8"
-echo "Building nicolasdorier/nbxplorer:2.2.12"
+echo "Building nicolasdorier/nbxplorer:2.2.15"
 git clone https://github.com/dgarage/nbxplorer nbxplorer
 cd nbxplorer
-git checkout v2.2.12
+git checkout v2.2.15
 cd "$(dirname $DOCKERFILE)"
-docker build -f "$DOCKERFILE" -t "nicolasdorier/nbxplorer:2.2.12" .
+docker build -f "$DOCKERFILE" -t "nicolasdorier/nbxplorer:2.2.15" .
 cd - && cd ..
 
 
@@ -726,18 +726,18 @@ cd - && cd ..
 
 
 # Build joinmarket
-# https://raw.githubusercontent.com/btcpayserver/dockerfile-deps/JoinMarket/0.9.1/JoinMarket/0.9.1/linuxamd64.Dockerfile
-DOCKERFILE="JoinMarket/0.9.1/linuxamd64.Dockerfile"
-# https://raw.githubusercontent.com/btcpayserver/dockerfile-deps/JoinMarket/0.9.1/JoinMarket/0.9.1/linuxarm32v7.Dockerfile
-[[ "$(uname -m)" == "armv7l" ]] && DOCKERFILE="JoinMarket/0.9.1/linuxarm32v7.Dockerfile"
-# https://raw.githubusercontent.com/btcpayserver/dockerfile-deps/JoinMarket/0.9.1/JoinMarket/0.9.1/linuxarm64v8.Dockerfile
-[[ "$(uname -m)" == "aarch64" ]] && DOCKERFILE="JoinMarket/0.9.1/linuxarm64v8.Dockerfile"
-echo "Building btcpayserver/joinmarket:0.9.1"
+# https://raw.githubusercontent.com/btcpayserver/dockerfile-deps/JoinMarket/0.9.3/JoinMarket/0.9.3/linuxamd64.Dockerfile
+DOCKERFILE="JoinMarket/0.9.3/linuxamd64.Dockerfile"
+# https://raw.githubusercontent.com/btcpayserver/dockerfile-deps/JoinMarket/0.9.3/JoinMarket/0.9.3/linuxarm32v7.Dockerfile
+[[ "$(uname -m)" == "armv7l" ]] && DOCKERFILE="JoinMarket/0.9.3/linuxarm32v7.Dockerfile"
+# https://raw.githubusercontent.com/btcpayserver/dockerfile-deps/JoinMarket/0.9.3/JoinMarket/0.9.3/linuxarm64v8.Dockerfile
+[[ "$(uname -m)" == "aarch64" ]] && DOCKERFILE="JoinMarket/0.9.3/linuxarm64v8.Dockerfile"
+echo "Building btcpayserver/joinmarket:0.9.3"
 git clone https://github.com/btcpayserver/dockerfile-deps joinmarket
 cd joinmarket
-git checkout JoinMarket/0.9.1
+git checkout JoinMarket/0.9.3
 cd "$(dirname $DOCKERFILE)"
-docker build -f "$DOCKERFILE" -t "btcpayserver/joinmarket:0.9.1" .
+docker build -f "$DOCKERFILE" -t "btcpayserver/joinmarket:0.9.3" .
 cd - && cd ..
 
 
@@ -812,14 +812,14 @@ cd - && cd ..
 
 
 # Build tallycoin_connect
-# https://raw.githubusercontent.com/dennisreimann/tallycoin_connect/v1.4.0/Dockerfile
+# https://raw.githubusercontent.com/dennisreimann/tallycoin_connect/v1.7.0/Dockerfile
 DOCKERFILE="Dockerfile"
-echo "Building dennisreimann/tallycoin_connect:v1.4.0"
+echo "Building dennisreimann/tallycoin_connect:v1.7.0"
 git clone https://github.com/dennisreimann/tallycoin_connect tallycoin_connect
 cd tallycoin_connect
-git checkout v1.4.0
+git checkout v1.7.0
 cd "$(dirname $DOCKERFILE)"
-docker build -f "$DOCKERFILE" -t "dennisreimann/tallycoin_connect:v1.4.0" .
+docker build -f "$DOCKERFILE" -t "dennisreimann/tallycoin_connect:v1.7.0" .
 cd - && cd ..
 
 
@@ -1040,18 +1040,18 @@ cd - && cd ..
 
 
 # Build postgres
-# https://raw.githubusercontent.com/docker-library/postgres/b7cb3c6eacea93be2259381033be3cc435649369/9.6/Dockerfile
-DOCKERFILE="9.6/Dockerfile"
-# https://raw.githubusercontent.com/docker-library/postgres/b7cb3c6eacea93be2259381033be3cc435649369/9.6/Dockerfile
-[[ "$(uname -m)" == "armv7l" ]] && DOCKERFILE="9.6/Dockerfile"
-# https://raw.githubusercontent.com/docker-library/postgres/b7cb3c6eacea93be2259381033be3cc435649369/9.6/Dockerfile
-[[ "$(uname -m)" == "aarch64" ]] && DOCKERFILE="9.6/Dockerfile"
-echo "Building postgres:13.4"
-git clone https://github.com/docker-library/postgres postgres
+# https://raw.githubusercontent.com/btcpayserver/dockerfile-deps/Postgres/13.4-4/Postgres/13.4/linuxamd64.Dockerfile
+DOCKERFILE="Postgres/13.4/linuxamd64.Dockerfile"
+# https://raw.githubusercontent.com/btcpayserver/dockerfile-deps/Postgres/13.4-4/Postgres/13.4/linuxarm32v7.Dockerfile
+[[ "$(uname -m)" == "armv7l" ]] && DOCKERFILE="Postgres/13.4/linuxarm32v7.Dockerfile"
+# https://raw.githubusercontent.com/btcpayserver/dockerfile-deps/Postgres/13.4-4/Postgres/13.4/linuxarm64v8.Dockerfile
+[[ "$(uname -m)" == "aarch64" ]] && DOCKERFILE="Postgres/13.4/linuxarm64v8.Dockerfile"
+echo "Building btcpayserver/postgres:13.4-4"
+git clone https://github.com/btcpayserver/dockerfile-deps postgres
 cd postgres
-git checkout b7cb3c6eacea93be2259381033be3cc435649369
+git checkout Postgres/13.4-4
 cd "$(dirname $DOCKERFILE)"
-docker build -f "$DOCKERFILE" -t "postgres:13.4" .
+docker build -f "$DOCKERFILE" -t "btcpayserver/postgres:13.4-4" .
 cd - && cd ..
 
 
