@@ -423,6 +423,8 @@ if ! [[ -x "$(command -v docker)" ]] || ! [[ -x "$(command -v docker-compose)" ]
         fi
     fi
 
+    docker_update
+
     if ! [[ -x "$(command -v docker-compose)" ]]; then
         if ! [[ "$OSTYPE" == "darwin"* ]] && $HAS_DOCKER; then
             echo "Trying to install docker-compose by using the btcpayserver/docker-compose ($(uname -m))"
