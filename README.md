@@ -1,8 +1,3 @@
-20210928JQ Update 
-A)  path to docker image docker-compose-generator/docker-fragments/btcpayserver.yml
-B)  docker-compose-generator/docker-fragments/opt-lnd-config.custom.yml
-and include in arguments before running btcpay-setup.sh -i
-
 [![CircleCI](https://circleci.com/gh/btcpayserver/btcpayserver-docker.svg?style=svg)](https://app.circleci.com/pipelines/github/btcpayserver/btcpayserver-docker)
 
 #### Start accepting Bitcoin today with BTCPay Server! This guide will walk you through the installation.
